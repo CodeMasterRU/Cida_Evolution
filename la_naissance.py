@@ -6,27 +6,38 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
 import time
+import numpy as np
+import seaborn as sns
+
+globalTab = []
+
+page_url = "https://en.wikipedia.org/wiki/Epidemiology_of_HIV/AIDS" 
+service = ChromeService(executable_path=ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+driver.get(page_url)
+time.sleep(5)
+
+all = driver.find_element(By.XPATH, '//table[@class="wikitable"]')
 
 rows = []
-
-def scrapping():
-    page_url = "https://en.wikipedia.org/wiki/Epidemiology_of_HIV/AIDS" 
-    service = ChromeService(executable_path=ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service)
-    driver.get(page_url)
-
-    all = driver.find_element(By.XPATH, '//ul[@class="product-grid"]')
-
-
-    for x in all.find_elements(By.XPATH, './/li[@class="product-grid-item"]'):
-        year = x.find_element(By.XPATH, './/h2[@class="ds-title ds-title--s"]').text
-        Infection_Incidence_Rate = x.find_element(By.XPATH, './/span[@class="product-price__amount-value"]').text
-        Infection_Prevalence_Rate = x.find_element(By.XPATH, './/div[@class="ds-body-text ds-product-card-refonte__perunitlabel ds-body-text--size-s ds-body-text--color-standard-3"]').text.strip(' € / KG')
-        rows.append((year, Infection_Incidence_Rate, Infection_Prevalence_Rate))
-
-    # driver.close()
-    # df = pd.DataFrame(rows, columns=["titre", "prix_barquette", "prix_par_kilo"])
-    # df.to_csv(f"la_naissace.csv", index=False)
-    # df.to_excel(f"test{page}.xlsx", index=False)
-
-mydf = scrapping()
+count = 0
+for element in all.find_elements(By.XPATH, './/td'):
+    
+    element_text = element.text.strip()
+    rows.append(element_text)
+    if count % 4 == 3:
+        globalTab.append(rows)
+        rows = []
+    count+=1
+# print(globalTab)
+for i in range(len(globalTab)):
+    for j in range(len(globalTab[i])):
+        if globalTab[i][j].isdigit():
+            globalTab[i][j] = int(globalTab[i][j].replace(' ', ''))
+        elif globalTab[i][j].replace(' ', '').isdigit():
+            globalTab[i][j] = int(globalTab[i][j].replace(' ', ''))
+df = pd.DataFrame(globalTab, columns=["year", "deaths_due_globally", "infection_incidence_rate", "infection_prevalence_rate"])
+df['year'] = df['year'].replace('2021[39]', '2021')
+df.to_excel("deaths.xlsx", index = False)
+df.to_csv("deaths.csv", index = False)
+driver.close()
