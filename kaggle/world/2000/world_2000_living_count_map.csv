@@ -1,6 +1,6 @@
 Country,Count_median
 Afghanistan,1600.0
-Albania,
+Albania,100.0
 Algeria,1900.0
 Angola,87000.0
 Argentina,64000.0
@@ -20,7 +20,7 @@ Bhutan,530.0
 Bolivia (Plurinational State of),21000.0
 Bosnia and Herzegovina,100.0
 Botswana,280000.0
-Brazil,410000.0
+Brazil,540000.0
 Brunei Darussalam,
 Bulgaria,500.0
 Burkina Faso,140000.0
@@ -28,11 +28,11 @@ Burundi,130000.0
 Cabo Verde,1600.0
 Cambodia,81000.0
 Cameroon,370000.0
-Canada,
+Canada, 49000.0
 Central African Republic,160000.0
 Chad,80000.0
 Chile,14000.0
-China,
+China, 250000.0
 Colombia,110000.0
 Comoros,100.0
 Congo,80000.0
@@ -48,7 +48,7 @@ Denmark,4000.0
 Djibouti,9400.0
 Dominican Republic,85000.0
 Ecuador,26000.0
-Egypt,1500.0
+Egypt,8000.0
 El Salvador,18000.0
 Equatorial Guinea,13000.0
 Eritrea,16000.0
@@ -63,7 +63,7 @@ Gambia,9900.0
 Georgia,980.0
 Germany,45000.0
 Ghana,270000.0
-Greece,
+Greece,8000.0
 Guatemala,44000.0
 Guinea,83000.0
 Guinea-Bissau,22000.0
@@ -72,9 +72,9 @@ Haiti,150000.0
 Honduras,40000.0
 Hungary,830.0
 Iceland,100.0
-India,
+India, 3700000.0
 Indonesia,80000.0
-Iran (Islamic Republic of),16000.0
+Iran (Islamic Republic of),20000.0
 Ireland,1900.0
 Israel,2700.0
 Italy,68000.0
@@ -91,14 +91,14 @@ Lebanon,910.0
 Lesotho,260000.0
 Liberia,43000.0
 Libya,950.0
-Lithuania,
+Lithuania,500.0
 Luxembourg,500.0
 Madagascar,13000.0
 Malawi,810000.0
 Malaysia,55000.0
-Maldives,
+Maldives,100.0
 Mali,110000.0
-Malta,
+Malta,500.0
 Mauritania,5500.0
 Mauritius,3200.0
 Mexico,130000.0
@@ -122,22 +122,22 @@ Papua New Guinea,20000.0
 Paraguay,14000.0
 Peru,71000.0
 Philippines,1000.0
-Poland,
+Poland,14000.0
 Portugal,32000.0
 Qatar,
-Republic of Korea,
+Republic of Korea,3800.0
 Republic of Moldova,10000.0
 Republic of North Macedonia,100.0
 Romania,7500.0
-Russian Federation,
+Russian Federation, 235000.0
 Rwanda,240000.0
-Saudi Arabia,
+Saudi Arabia,1900.0
 Senegal,33000.0
 Serbia,1000.0
 Sierra Leone,40000.0
 Singapore,2900.0
 Slovakia,200.0
-Slovenia,
+Slovenia,200.0
 Somalia,16000.0
 South Africa,3300000.0
 South Sudan,90000.0
@@ -145,26 +145,26 @@ Spain,92000.0
 Sri Lanka,2200.0
 Sudan,15000.0
 Suriname,3100.0
-Sweden,
-Switzerland,
+Sweden,3000.0
+Switzerland,17000.0
 Syrian Arab Republic,500.0
 Tajikistan,1400.0
 Thailand,740000.0
 Timor-Leste,
 Togo,94000.0
-Trinidad and Tobago,
+Trinidad and Tobago,7800.0
 Tunisia,500.0
 Turkey,
 Turkmenistan,
 Uganda,1000000.0
 Ukraine,170000.0
-United Arab Emirates,
-United Kingdom of Great Britain and Northern Ireland,
+United Arab Emirates,100000.0
+United Kingdom of Great Britain and Northern Ireland,31000.0
 United Republic of Tanzania,1100000.0
-United States of America, 774467.0
+United States of America, 850000.0
 Uruguay,6000.0
 Uzbekistan,14000.0
-Venezuela (Bolivarian Republic of),
+Venezuela (Bolivarian Republic of), 50000.0
 Viet Nam,120000.0
 Yemen,1100.0
 Zambia,890000.0

@@ -1,19 +1,19 @@
 Country,Count_median
 Afghanistan,4200.0
-Albania,
+Albania,0.0
 Algeria,7100.0
 Angola,220000.0
 Argentina,110000.0
 Armenia,3300.0
 Australia,21000.0
 Austria,
-Azerbaijan,
+Azerbaijan,7800.0
 Bahamas,5800.0
-Bahrain,
+Bahrain,0.0
 Bangladesh,7700.0
 Barbados,2300.0
 Belarus,12000.0
-Belgium,
+Belgium,15000.0
 Belize,3700.0
 Benin,61000.0
 Bhutan,1300.0
@@ -28,11 +28,11 @@ Burundi,93000.0
 Cabo Verde,2100.0
 Cambodia,79000.0
 Cameroon,520000.0
-Canada,
+Canada,631000.0
 Central African Republic,140000.0
 Chad,99000.0
 Chile,39000.0
-China,
+China,550000.0
 Colombia,130000.0
 Comoros,200.0
 Congo,82000.0
@@ -63,7 +63,7 @@ Gambia,18000.0
 Georgia,5600.0
 Germany,69000.0
 Ghana,300000.0
-Greece,
+Greece,11000.0
 Guatemala,49000.0
 Guinea,100000.0
 Guinea-Bissau,38000.0
@@ -72,7 +72,7 @@ Haiti,140000.0
 Honduras,26000.0
 Hungary,2000.0
 Iceland,500.0
-India,
+India,2700000.0
 Indonesia,510000.0
 Iran (Islamic Republic of),50000.0
 Ireland,4800.0
@@ -91,7 +91,7 @@ Lebanon,1600.0
 Lesotho,300000.0
 Liberia,41000.0
 Libya,6100.0
-Lithuania,
+Lithuania,2200.0
 Luxembourg,700.0
 Madagascar,21000.0
 Malawi,870000.0
@@ -122,14 +122,14 @@ Papua New Guinea,38000.0
 Paraguay,20000.0
 Peru,65000.0
 Philippines,15000.0
-Poland,
+Poland,20000.0
 Portugal,40000.0
 Qatar,
-Republic of Korea,
+Republic of Korea,13000.0
 Republic of Moldova,16000.0
 Republic of North Macedonia,200.0
 Romania,14000.0
-Russian Federation,
+Russian Federation,444000.0
 Rwanda,220000.0
 Saudi Arabia,
 Senegal,44000.0
@@ -137,7 +137,7 @@ Serbia,1800.0
 Sierra Leone,58000.0
 Singapore,6500.0
 Slovakia,500.0
-Slovenia,
+Slovenia,280.0
 Somalia,17000.0
 South Africa,6100000.0
 South Sudan,140000.0
@@ -145,8 +145,8 @@ Spain,140000.0
 Sri Lanka,4000.0
 Sudan,43000.0
 Suriname,4600.0
-Sweden,
-Switzerland,
+Sweden,6200.0
+Switzerland,25000.0
 Syrian Arab Republic,570.0
 Tajikistan,9200.0
 Thailand,580000.0
@@ -154,17 +154,17 @@ Timor-Leste,
 Togo,100000.0
 Trinidad and Tobago,
 Tunisia,1400.0
-Turkey,
+Turkey,4600.0
 Turkmenistan,
 Uganda,1200000.0
 Ukraine,230000.0
 United Arab Emirates,
 United Kingdom of Great Britain and Northern Ireland,
-United Republic of Tanzania,1300000.0
+United Republic of Tanzania,1400000.0
 United States of America,1200000.0
 Uruguay,9600.0
 Uzbekistan,30000.0
-Venezuela (Bolivarian Republic of),
+Venezuela (Bolivarian Republic of),110000.0
 Viet Nam,220000.0
 Yemen,5100.0
 Zambia,1000000.0

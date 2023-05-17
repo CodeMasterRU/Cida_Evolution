@@ -9,11 +9,11 @@ Australia,28000.0
 Austria,
 Azerbaijan,
 Bahamas,6000.0
-Bahrain,
+Bahrain,500.0
 Bangladesh,14000.0
 Barbados,3000.0
 Belarus,27000.0
-Belgium,
+Belgium,0.0
 Belize,4900.0
 Benin,73000.0
 Bhutan,1300.0
@@ -28,11 +28,11 @@ Burundi,82000.0
 Cabo Verde,2400.0
 Cambodia,73000.0
 Cameroon,540000.0
-Canada,
+Canada,639000.0
 Central African Republic,110000.0
 Chad,120000.0
 Chile,71000.0
-China,
+China,1250000.0
 Colombia,160000.0
 Comoros,200.0
 Congo,89000.0
@@ -63,7 +63,7 @@ Gambia,26000.0
 Georgia,9400.0
 Germany,87000.0
 Ghana,330000.0
-Greece,
+Greece,14000.0
 Guatemala,47000.0
 Guinea,120000.0
 Guinea-Bissau,44000.0
@@ -72,7 +72,7 @@ Haiti,160000.0
 Honduras,23000.0
 Hungary,3700.0
 Iceland,500.0
-India,
+India, 2300000.0
 Indonesia,640000.0
 Iran (Islamic Republic of),61000.0
 Ireland,7200.0
@@ -91,7 +91,7 @@ Lebanon,2500.0
 Lesotho,340000.0
 Liberia,39000.0
 Libya,9200.0
-Lithuania,
+Lithuania,0.0
 Luxembourg,1200.0
 Madagascar,39000.0
 Malawi,1000000.0
@@ -109,7 +109,7 @@ Mozambique,2200000.0
 Myanmar,240000.0
 Namibia,200000.0
 Nepal,30000.0
-Netherlands,
+Netherlands,23000.0
 New Zealand,3600.0
 Nicaragua,9400.0
 Niger,36000.0
@@ -122,22 +122,22 @@ Papua New Guinea,45000.0
 Paraguay,21000.0
 Peru,79000.0
 Philippines,77000.0
-Poland,
+Poland,24000.0
 Portugal,41000.0
-Qatar,
-Republic of Korea,
+Qatar,500.0
+Republic of Korea,0.0
 Republic of Moldova,17000.0
 Republic of North Macedonia,500.0
 Romania,18000.0
-Russian Federation,
+Russian Federation,1000000.0
 Rwanda,220000.0
-Saudi Arabia,
+Saudi Arabia, 11000.0
 Senegal,42000.0
 Serbia,3000.0
 Sierra Leone,70000.0
 Singapore,7900.0
 Slovakia,1200.0
-Slovenia,
+Slovenia,1000.0
 Somalia,11000.0
 South Africa,7700000.0
 South Sudan,190000.0
@@ -145,8 +145,8 @@ Spain,150000.0
 Sri Lanka,3500.0
 Sudan,59000.0
 Suriname,5600.0
-Sweden,
-Switzerland,
+Sweden,11000.0
+Switzerland,17000.0
 Syrian Arab Republic,660.0
 Tajikistan,13000.0
 Thailand,480000.0
@@ -159,7 +159,7 @@ Turkmenistan,
 Uganda,1400000.0
 Ukraine,240000.0
 United Arab Emirates,
-United Kingdom of Great Britain and Northern Ireland,
+United Kingdom of Great Britain and Northern Ireland,105200.0
 United Republic of Tanzania,1600000.0
 United States of America,1700000.0
 Uruguay,14000.0
