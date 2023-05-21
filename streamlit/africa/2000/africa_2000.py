@@ -2,7 +2,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv("../../../csvs/no_of_deaths_by_country_clean.csv", sep=',').dropna()
+df = pd.read_csv("../../csvs/no_of_deaths_by_country_clean.csv", sep=',').dropna()
 
 df = df[['Count_median', 'Country', 'WHO Region', 'Year']]
 africa = df[df['WHO Region'] == 'Africa']

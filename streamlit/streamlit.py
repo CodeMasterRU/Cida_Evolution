@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 import seaborn as sns
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
 
@@ -10,7 +10,7 @@ st.write("""
 ## Le nombre de morts dans le monde
 """)
 
-# scrap1()
+# scrap1
 deaths_df = pd.read_csv("./deaths.csv")
 g = sns.barplot(data=deaths_df, x="year", y="deaths_due_globally")
 g.set_ylabel("Number of Deaths (millions)")
@@ -21,7 +21,7 @@ st.write("""
 ## Le nombre de morts dans le monde triee par continent
 """)
 
-# scrap2()
+# scrap2
 
 df = pd.read_csv("deaths_all_continents.csv", index_col="id")
 
@@ -32,12 +32,9 @@ ax.set_title("Total Cumulative Deaths by Region and Time Period")
 ax.set_ylabel("Number of Deaths (millions)")
 ax.legend(title="Time Period", fontsize='small')
 
-# # Show plot
+# Show plot
 # plt.show()
 st.pyplot(ax.figure)
-
-
-
 
 
 st.write("""
@@ -59,6 +56,11 @@ americas_2018 = pd.read_csv("./americas/2018/americas_2018_map.csv", sep=',')
 europe_2018 = pd.read_csv("./europe/2018/europe_2018_map.csv", sep=',')
 asia_2018 = pd.read_csv("./asia/2018/asia_2018_map.csv", sep=',')
 
+
+#--------world---------
+world_2000 = pd.read_csv("./world_malades/2000/world_2000_living_count_map.csv", sep=',')
+world_2010 = pd.read_csv("./world_malades/2010/world_2010_living_count_map.csv", sep=',')
+world_2018 = pd.read_csv("./world_malades/2018/world_2018_living_count_map.csv", sep=',')
 
 
 def select_data(choix_continent, choix_anne):
@@ -143,7 +145,7 @@ def generate_data(countries, count_median):
 
 
 # Create the map
-def choosezone(continent):
+def choosezone_deaths(continent):
     # Define the layout of the map
     layout = dict(title='Median Count of Countries in Africa',
             geo=dict(scope=continent)
@@ -167,7 +169,7 @@ select_data(choix_de_continent, choix_anne)
 
 def get_continent(choix_de_continent, choix_anne):
     st.write(choix_de_continent, choix_anne)
-    st.plotly_chart(choosezone(choix_de_continent))
+    st.plotly_chart(choosezone_deaths(choix_de_continent))
     
 
 get_continent(choix_de_continent, choix_anne)
@@ -182,4 +184,83 @@ get_continent(choix_de_continent, choix_anne)
 
     # return fig
 
+st.write("""
+## World Malades
+""")
+
+def select_data_world(choix_anne_world):
+    if choix_anne_world == 2000:
+        countries = world_2000['Country']
+        count_median = world_2000['Count_median']
+
+    elif choix_anne_world == 2010:
+        countries = world_2010['Country']
+        count_median = world_2010['Count_median']
+    else:
+        countries = world_2018['Country']
+        count_median = world_2018['Count_median'] 
+    return countries, count_median
+
+# Create the map 
+def chooseannee_malades(choix_anne_world):
+    # Define the layout of the map
+    layout = dict(title='Median Count of Countries in Word',
+            geo=dict(scope='world')
+        )  
+    country = select_data_world(choix_anne_world)[0]
+    count_med = select_data_world(choix_anne_world)[1]
+    fig = go.Figure(data=[generate_data(country,count_med)], layout=layout)
+    fig.update_layout(height=500, margin={"r":0,"t":0,"l":0,"b":0})
+    # st.plotly_chart(fig)
+    return fig
+
+
+choix_anne_world = st.selectbox(
+    'Des informations dyu monde sur quelle anee vous aimeriez voir?',
+    (2000, 2010, 2018))
+
+def get_annee_malades(choix_anne_world):
+    st.write(choix_anne_world)
+    st.plotly_chart(chooseannee_malades(choix_anne_world))
+
+get_annee_malades(choix_anne_world)
+
+st.write("""
+## Koeff de malades
+""")
+
+df_habitant = pd.read_csv("./../csvs/world_population.csv")
+
+df_habitant = df_habitant[['Country/Territory', '2000 Population']]
+
+countries = ["Algeria", "Cameroon", "Ethiopia", "Kenya", "Nigeria", "Belarus", "France", "Finland", "Germany", "Spain", "Argentina", "Brazil", "Haiti", "Mexico", "Peru", "Morocco", "Cambodia", "Malaysia", "Viet Nam"]
+
+filtered_countries_habitant = df_habitant[df_habitant['Country/Territory'].isin(countries)]
+
+df_sida = pd.read_csv("./../csvs/no_of_people_living_with_hiv_by_country_clean.csv", sep=',')
+
+df_sida = df_sida[['Country','Count_median','Year']]
+
+df_sida = df_sida[df_sida["Year"]==2000]
+df_sida = df_sida[['Country','Count_median']]
+
+countries = ["Algeria", "Cameroon", "Ethiopia", "Kenya", "Nigeria", "Belarus", "France", "Finland", "Germany", "Spain", "Argentina", "Brazil", "Haiti", "Mexico", "Peru", "Morocco", "Cambodia", "Malaysia", "Viet Nam"]
+
+filtered_countries_sida = df_sida[df_sida['Country'].isin(countries)]
+
+df_merged = pd.merge(filtered_countries_habitant, filtered_countries_sida, left_on='Country/Territory', right_on='Country')
+
+df_merged = df_merged.drop(columns=['Country'])
+
+df_merged = df_merged.rename(columns={'Country/Territory': 'Country' ,'2000 Population': 'Population_2000', 'Count_median': 'Median_Count_2000'})
+
+population = df_merged[['Population_2000']].astype(float)
+sida = df_merged[['Median_Count_2000']].astype(float)
+
+koeff = sida.values/population.values
+df_merged.insert(3, "Koeff %", koeff * 100, True)
+ax = df_merged.plot(kind='bar', x = 'Country', y='Koeff %', figsize=(10, 3))
+ax.set_title("Deaths median in Europe in %")
+
+st.pyplot(ax.figure)
 
