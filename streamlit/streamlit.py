@@ -250,7 +250,7 @@ choix_de_continent = st.selectbox(
     'Des informations sur le continent que vous aimeriez voir?',
     ('africa', 'north america', 'south america',  'europe', 'asia'))
 choix_anne = st.selectbox(
-    'Des informations sur quelle anee vous aimeriez voir?',
+    'L\'annee que vous aimeriez voir?',
     (2000, 2010, 2018))
 
 # st.write('You selected:', choix_de_continent)
@@ -309,7 +309,7 @@ def chooseannee_malades(choix_anne_world):
 
 
 choix_anne_world = st.selectbox(
-    'Des informations dyu monde sur quelle anee vous aimeriez voir?',
+    'Les années que vous aimeriez voir?',
     (2000, 2010, 2018))
 
 
