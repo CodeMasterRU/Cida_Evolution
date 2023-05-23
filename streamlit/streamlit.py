@@ -25,7 +25,7 @@ Le nombre de décès dus au sida dans le monde
 """)
 
 # scrap1
-deaths_df = pd.read_csv("./deaths.csv")
+deaths_df = pd.read_csv("deaths.csv")
 g = sns.barplot(data=deaths_df, x="year", y="deaths_due_globally")
 g.set_ylabel("Nombre de décès (millions)")
 g.set_title("Monde")
