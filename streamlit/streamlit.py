@@ -25,7 +25,7 @@ Le nombre de décès dus au sida dans le monde
 """)
 
 # scrap1
-deaths_df = pd.read_csv("deaths.csv")
+deaths_df = pd.read_csv("./csvs/deaths.csv")
 g = sns.barplot(data=deaths_df, x="year", y="deaths_due_globally")
 g.set_ylabel("Nombre de décès (millions)")
 g.set_title("Monde")
@@ -40,7 +40,7 @@ Le nombre de morts dans le monde trié par continent
 
 # scrap2
 
-df = pd.read_csv("deaths_all_continents.csv", index_col="id")
+df = pd.read_csv("./csvs/deaths_all_continents.csv", index_col="id")
 
 df = df.replace('\s+', '', regex=True).astype(int)
 # Plot bar chart
