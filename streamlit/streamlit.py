@@ -6,8 +6,7 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
-from PIL import Image
-import cv2
+
 st.title("Évolution du SIDA")
 
 st.header("Qu'est ce que le VIH?")
@@ -354,7 +353,7 @@ plt.legend()
 plt.grid(True)
 plt.xticks(rotation=45)
 
-# Display the graph using Streamlit
+
 st.pyplot(plt)
 
 
@@ -412,36 +411,34 @@ years = np.array([1999, 2001, 2003, 2007, 2009, 2013,
                  2018, 2019, 2020]).reshape(-1, 1)
 deaths = np.array([2000, 800, 1000, 1600, 1700, 1500, 500, 500, 500])
 
-# Create and train the linear regression model
+
 model = LinearRegression()
 model.fit(years, deaths)
 
-# Create Streamlit app
 st.header('Prédiction des décès liés au VIH/SIDA')
 st.subheader('Regression lineare')
 st.write('Enter a year to predict the number of deaths in France:')
 
-# Input year from the user
+
 year_input = st.number_input(
     'Year:', min_value=1999, max_value=2100, step=1, key='lin')
 
-# Make prediction for the input year
+
 prediction = model.predict(np.array([[year_input]]))
 
-# Display the predicted number of deaths
+
 st.write(f'Predicted number of deaths in {year_input}: {prediction[0]:.0f}')
 
-#
-# Define the data
+
 years = np.array([1999, 2001, 2003, 2007, 2009, 2013,
                  2018, 2019, 2020]).reshape(-1, 1)
 deaths = np.array([2000, 800, 1000, 1600, 1700, 1500, 500, 500, 500])
 
-# Create polynomial features
+
 poly_features = PolynomialFeatures(degree=3)
 X_poly = poly_features.fit_transform(years)
 
-# Create and train the polynomial regression model
+
 model = LinearRegression()
 model.fit(X_poly, deaths)
 
@@ -453,13 +450,13 @@ st.write('Enter a year to predict the number of deaths in France:')
 year_input2 = st.number_input(
     'Year:', min_value=1999, max_value=2100, step=1, key='poly')
 
-# Transform the input year to polynomial features
+
 X_input = poly_features.transform(np.array([[year_input2]]))
 
-# Make prediction for the input year
+
 prediction = model.predict(X_input)
 
-# Display the predicted number of deaths
+
 st.write(f'Predicted number of deaths in {year_input2}: {prediction[0]:.0f}')
 
 st.write("#")
