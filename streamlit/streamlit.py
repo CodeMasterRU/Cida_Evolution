@@ -59,7 +59,7 @@ st.write("#")
 st.write("#")
 #-------------------------------------IMAGE
 # Open the text file
-file_path = "./gettxt/ascii.txt"
+file_path = "./ascii_image/scrull.txt"
 
 with open(file_path, "r") as file:
 
