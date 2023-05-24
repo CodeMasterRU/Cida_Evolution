@@ -40,7 +40,7 @@ Le nombre de morts dans le monde trié par continent
 
 # scrap2
 
-df = pd.read_csv("./csvs/deaths_all_continents.csv", index_col="id")
+df = pd.read_csv("./streamlit/csvs/deaths_all_continents.csv", index_col="id")
 
 df = df.replace('\s+', '', regex=True).astype(int)
 # Plot bar chart
@@ -59,7 +59,7 @@ st.write("#")
 st.write("#")
 #-------------------------------------IMAGE
 # Open the text file
-file_path = "./ascii_image/bones.txt"
+file_path = "./streamlit/ascii_image/bones.txt"
 
 with open(file_path, "r") as file:
 
@@ -75,29 +75,29 @@ st.write("""
 ## Nombre de morts par continent
 """)
 # --------2000---------
-africa_2000 = pd.read_csv("./africa/2000/africa_2000_map.csv", sep=',')
-americas_2000 = pd.read_csv("./americas/2000/americas_2000_map.csv", sep=',')
-europe_2000 = pd.read_csv("./europe/2000/europe_2000_map.csv", sep=',')
-asia_2000 = pd.read_csv("./asia/2000/asia_2000_map.csv", sep=',')
+africa_2000 = pd.read_csv("./streamlit/africa/2000/africa_2000_map.csv", sep=',')
+americas_2000 = pd.read_csv("./streamlit/americas/2000/americas_2000_map.csv", sep=',')
+europe_2000 = pd.read_csv("./streamlit/europe/2000/europe_2000_map.csv", sep=',')
+asia_2000 = pd.read_csv("./streamlit/asia/2000/asia_2000_map.csv", sep=',')
 # --------2010---------
-africa_2010 = pd.read_csv("./africa/2010/africa_2010_map.csv", sep=',')
-americas_2010 = pd.read_csv("./americas/2010/americas_2010_map.csv", sep=',')
-europe_2010 = pd.read_csv("./europe/2010/europe_2010_map.csv", sep=',')
-asia_2010 = pd.read_csv("./asia/2010/asia_2010_map.csv", sep=',')
+africa_2010 = pd.read_csv("./streamlit/africa/2010/africa_2010_map.csv", sep=',')
+americas_2010 = pd.read_csv("./streamlit/americas/2010/americas_2010_map.csv", sep=',')
+europe_2010 = pd.read_csv("./streamlit/europe/2010/europe_2010_map.csv", sep=',')
+asia_2010 = pd.read_csv("./streamlit/asia/2010/asia_2010_map.csv", sep=',')
 # --------2018---------
-africa_2018 = pd.read_csv("./africa/2018/africa_2018_map.csv", sep=',')
-americas_2018 = pd.read_csv("./americas/2018/americas_2018_map.csv", sep=',')
-europe_2018 = pd.read_csv("./europe/2018/europe_2018_map.csv", sep=',')
-asia_2018 = pd.read_csv("./asia/2018/asia_2018_map.csv", sep=',')
+africa_2018 = pd.read_csv("./streamlit/africa/2018/africa_2018_map.csv", sep=',')
+americas_2018 = pd.read_csv("./streamlit/americas/2018/americas_2018_map.csv", sep=',')
+europe_2018 = pd.read_csv("./streamlit/europe/2018/europe_2018_map.csv", sep=',')
+asia_2018 = pd.read_csv("./streamlit/asia/2018/asia_2018_map.csv", sep=',')
 
 
 # --------world---------
 world_2000 = pd.read_csv(
-    "./world_malades/2000/world_2000_living_count_map.csv", sep=',')
+    "./streamlit/world_malades/2000/world_2000_living_count_map.csv", sep=',')
 world_2010 = pd.read_csv(
-    "./world_malades/2010/world_2010_living_count_map.csv", sep=',')
+    "./streamlit/world_malades/2010/world_2010_living_count_map.csv", sep=',')
 world_2018 = pd.read_csv(
-    "./world_malades/2018/world_2018_living_count_map.csv", sep=',')
+    "./streamlit/world_malades/2018/world_2018_living_count_map.csv", sep=',')
 
 
 def select_data(choix_continent, choix_anne):
@@ -365,7 +365,7 @@ st.header("""
 Koeff de malades
 """)
 
-df_habitant = pd.read_csv("./../csvs/world_population.csv")
+df_habitant = pd.read_csv("./csvs/world_population.csv")
 
 df_habitant = df_habitant[['Country/Territory', '2000 Population']]
 
@@ -376,7 +376,7 @@ filtered_countries_habitant = df_habitant[df_habitant['Country/Territory'].isin(
     countries)]
 
 df_sida = pd.read_csv(
-    "./../csvs/no_of_people_living_with_hiv_by_country_clean.csv", sep=',')
+    "./csvs/no_of_people_living_with_hiv_by_country_clean.csv", sep=',')
 
 df_sida = df_sida[['Country', 'Count_median', 'Year']]
 
